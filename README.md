@@ -1,6 +1,6 @@
 # Network Operations Lab Portfolio
 
-A practical networking lab repository that documents hands-on work with switching, routing, Linux, automation, and monitoring.
+This portfolio showcases my hands-on experience in networking, systems operations, and automation. It highlights how I practice switching, routing, troubleshooting, Linux administration, and network automation through real lab exercises and documentation.
 
 ## What this repo demonstrates
 This portfolio shows that I can:
