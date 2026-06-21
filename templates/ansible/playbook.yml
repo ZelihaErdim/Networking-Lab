@@ -1,13 +1,28 @@
 ---
-- hosts: routers
+- name: Collect router information
+  hosts: routers
   gather_facts: false
+  connection: network_cli
   tasks:
-    - name: Show router version
+    - name: Gather basic facts
+      ios_facts:
+
+    - name: Show version
       ios_command:
         commands:
           - show version
       register: version_output
 
-    - name: Print output
+    - name: Show IP interfaces
+      ios_command:
+        commands:
+          - show ip interface brief
+      register: interface_output
+
+    - name: Print version output
       debug:
         var: version_output.stdout_lines
+
+    - name: Print interface output
+      debug:
+        var: interface_output.stdout_lines
