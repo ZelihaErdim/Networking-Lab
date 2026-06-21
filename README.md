@@ -1,53 +1,39 @@
 # Network Operations Lab Portfolio
 
-This portfolio showcases my hands-on experience in networking, systems operations, and automation. It highlights how I practice switching, routing, troubleshooting, Linux administration, and network automation through real lab exercises and documentation.
+This repository presents a hands-on networking and operations portfolio focused on switching, routing, Linux troubleshooting, monitoring, and automation. The labs are organized as practical technical artifacts that show how I validate network behavior, document troubleshooting steps, and use automation to make operational work more repeatable.
 
-## What this repo demonstrates
-This portfolio shows that I can:
-- understand how networks behave under normal and failure conditions
-- troubleshoot connectivity and configuration issues
-- use CLI tools confidently for validation and diagnosis
-- automate repeatable tasks with Python and Ansible
-- keep clear notes and evidence for technical discussion
+## Portfolio Summary
 
-## Skills covered
-- VLANs and switching
-- STP and loop prevention
-- Routing concepts and OSPF
-- BGP fundamentals
-- DHCP and DNS basics
-- Linux networking and system checks
-- Python scripting for network tasks
-- Ansible automation
-- Grafana monitoring concepts
+The project demonstrates applied networking knowledge across core infrastructure topics and day-to-day operations workflows. It combines command-line validation, topology notes, troubleshooting checklists, Python examples, Ansible templates, and monitoring concepts into one structured body of work.
 
-## Repository layout
-- [foundation-labs](./foundation-labs) — fundamentals and core networking labs
-- [operations-labs](./operations-labs) — Linux, automation, and operations labs
-- [topology](./topology) — topology diagrams and design notes
-- [templates](./templates) — reusable scripts and config examples
+## Technical Scope
 
-## Suggested lab setup
-- 1 switch
-- 2–3 routers
-- 2 client machines or VMs
-- 1 Linux server
-- Optional: GNS3, Packet Tracer, or EVE-NG
+- Layer 2 switching, VLAN design, trunking, and MAC address learning
+- Spanning Tree Protocol behavior, loop prevention, and failure recovery
+- Static routing, OSPF, BGP fundamentals, and reachability validation
+- DHCP, DNS, and service-level troubleshooting
+- Linux networking, system checks, logs, and operational diagnostics
+- Python and Netmiko scripting for network data collection
+- Ansible inventory and playbook examples for repeatable automation
+- Grafana monitoring concepts, metrics, and alerting awareness
 
-## Recommended workflow
-1. Read the lab notes in the relevant week folder.
-2. Recreate the topology in your environment.
-3. Run the commands and capture screenshots or outputs.
-4. Record what worked, what failed, and how you fixed it.
-5. Save useful configs, scripts, and notes for future review.
+## Repository Contents
 
-## Portfolio focus
-This is more than a command list. It is a record of how I practiced:
-- understanding network behavior
-- validating connectivity
-- identifying issues
-- documenting troubleshooting steps
-- automating repeatable work
+- [foundation-labs](./foundation-labs): core networking labs covering switching, STP, routing, OSPF, BGP, DHCP, DNS, and review scenarios
+- [operations-labs](./operations-labs): Linux, troubleshooting, Python, Netmiko, Grafana, Ansible, and final project materials
+- [topology](./topology): topology notes and network design references
+- [templates](./templates): reusable automation examples, including Netmiko and Ansible templates
 
-## Goal
-To show a structured path from networking fundamentals to practical operational thinking and automation.
+## Professional Value
+
+This portfolio highlights my ability to:
+
+- reason through network behavior across layers
+- validate infrastructure state with practical CLI evidence
+- isolate connectivity and service issues methodically
+- document technical findings clearly for review and handoff
+- connect manual troubleshooting with automation and monitoring workflows
+
+## Project Direction
+
+The labs build from foundational networking concepts into a small operations-focused final project. The overall direction is to show growth from NOC-style troubleshooting into stronger network engineering habits: clear validation, structured documentation, repeatable workflows, and operational awareness.
