@@ -1,14 +1,14 @@
 # Network Operations Lab Portfolio
 
-A practical networking lab repository that showcases hands-on experience with switching, routing, Linux, automation, and monitoring.
+A practical networking lab repository that documents hands-on work with switching, routing, Linux, automation, and monitoring.
 
-## What this repo shows
-This project is built to demonstrate:
-- core networking fundamentals
-- troubleshooting mindset
-- command-line confidence
-- basic automation skills
-- documentation and lab reflection habits
+## What this repo demonstrates
+This portfolio shows that I can:
+- understand how networks behave under normal and failure conditions
+- troubleshoot connectivity and configuration issues
+- use CLI tools confidently for validation and diagnosis
+- automate repeatable tasks with Python and Ansible
+- keep clear notes and evidence for technical discussion
 
 ## Skills covered
 - VLANs and switching
@@ -18,21 +18,14 @@ This project is built to demonstrate:
 - DHCP and DNS basics
 - Linux networking and system checks
 - Python scripting for network tasks
-- Ansible playbooks
+- Ansible automation
 - Grafana monitoring concepts
 
-## Portfolio focus
-This is not just a list of commands. It is a record of how I practiced:
-- understanding network behavior,
-- validating connectivity,
-- identifying issues,
-- and automating repeatable tasks.
-
 ## Repository layout
-- [week1](week1) — core Cisco networking labs
-- [week2](week2) — Linux, Python, monitoring, and automation labs
-- [topology](topology) — topology diagrams and notes
-- [templates](templates) — reusable scripts and configs
+- [foundation-labs](./foundation-labs) — fundamentals and core networking labs
+- [operations-labs](./operations-labs) — Linux, automation, and operations labs
+- [topology](./topology) — topology diagrams and design notes
+- [templates](./templates) — reusable scripts and config examples
 
 ## Suggested lab setup
 - 1 switch
@@ -41,11 +34,20 @@ This is not just a list of commands. It is a record of how I practiced:
 - 1 Linux server
 - Optional: GNS3, Packet Tracer, or EVE-NG
 
-## How to use this repo
-1. Review the lab notes.
+## Recommended workflow
+1. Read the lab notes in the relevant week folder.
 2. Recreate the topology in your environment.
-3. Run the commands and document the results.
-4. Save screenshots and observations for your portfolio.
+3. Run the commands and capture screenshots or outputs.
+4. Record what worked, what failed, and how you fixed it.
+5. Save useful configs, scripts, and notes for future review.
+
+## Portfolio focus
+This is more than a command list. It is a record of how I practiced:
+- understanding network behavior
+- validating connectivity
+- identifying issues
+- documenting troubleshooting steps
+- automating repeatable work
 
 ## Goal
 To show a structured path from networking fundamentals to practical operational thinking and automation.
