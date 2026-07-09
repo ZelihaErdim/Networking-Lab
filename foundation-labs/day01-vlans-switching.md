@@ -15,7 +15,7 @@ Build three VLANs across two switches and prove isolation works:
 
 ## Topology
 
-![Topology](images/day01-topology.png)
+![Topology](images/Day1%20images/day01-topology.png)
 
 Two 2960 switches connected with a crossover cable on Fa0/24. Four PCs on straight-through cables.
 
@@ -67,23 +67,23 @@ end
 ## What I Verified
 
 ### show vlan brief
-![VLAN Brief](images/day01-show-vlan-brief.png)
+![VLAN Brief](images/Day1%20images/day01-show-vlan-brief.png)
 
 Fa0/1 moved to VLAN 10, Fa0/2 moved to VLAN 20. Everything else stayed in VLAN 1.
 
 ### show interfaces trunk
-![Trunk](images/day01-show-interfaces-trunk.png)
+![Trunk](images/Day1%20images/day01-show-interfaces-trunk.png)
 
 Fa0/24 is trunking with 802.1Q. Native VLAN is 99. VLANs 1, 10, 20, 99 are all being carried.
 
 ### show mac address-table
-![MAC Table SW0](images/day01-show-mac-address-table-sw0.png)
-![MAC Table SW1](images/day01-show-mac-address-table-sw1.png)
+![MAC Table SW0](images/Day1%20images/day01-show-mac-address-table-sw0.png)
+![MAC Table SW1](images/Day1%20images/day01-show-mac-address-table-sw1.png)
 
 Local PCs show up on their access ports. Remote PCs show up on Fa0/24 because that's the trunk — the switch learned their MACs through it.
 
 ### Ping Tests
-![Ping Test](images/day01-ping-test.png)
+![Ping Test](images/Day1%20images/day01-ping-test.png)
 
 - PC4 → PC6 (both VLAN 10): **works** — 4/4 replies
 - PC4 → PC5 (different VLANs): **fails** — request timed out, 100% loss
