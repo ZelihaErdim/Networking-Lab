@@ -12,7 +12,7 @@ Build a 3-switch triangle topology, identify the root bridge and blocked port, s
 
 ## Topology
 
-![Topology](images/day02-topology.png)
+![Topology](images/Day2%20images/day02-topology.png)
 
 Three 2960 switches connected in a triangle with crossover cables.
 
@@ -27,21 +27,21 @@ Three 2960 switches connected in a triangle with crossover cables.
 ### STP State on All Three Switches
 
 **SW0** — not the root bridge
-![SW0 STP](images/day02-stp-sw0.png)
+![SW0 STP](images/Day2%20images/day02-stp-sw0.png)
 
 - Bridge ID: `0030.F253.C851`
 - Fa0/1: Alternate — **BLOCKED** (the orange dot in the topology)
 - Fa0/2: Root — forwarding (best path to the root bridge)
 
 **SW1** — not the root bridge
-![SW1 STP](images/day02-stp-sw1.png)
+![SW1 STP](images/Day2%20images/day02-stp-sw1.png)
 
 - Bridge ID: `000D.BD30.4B08`
 - Fa0/1: Designated — forwarding
 - Fa0/2: Root — forwarding (path to root bridge)
 
 **SW2** — the root bridge
-![SW2 STP](images/day02-stp-sw2.png)
+![SW2 STP](images/Day2%20images/day02-stp-sw2.png)
 
 - Bridge ID: `0001.C953.A894` — lowest MAC, so it won the election
 - Says "This bridge is the root"
@@ -53,14 +53,14 @@ All three switches had the same priority (32769). When priority ties, the switch
 ## Link Failure Test
 
 ### After Shutting Down SW0 Fa0/2
-![After Shutdown](images/day02-stp-after-shutdown.png)
+![After Shutdown](images/Day2%20images/day02-stp-after-shutdown.png)
 
 I shut down Fa0/2 on SW0 (`shutdown` command), which killed the direct path to the root bridge (SW2). STP reconverged:
 - Fa0/1 went from **blocked to Root FWD** — it became the new best path
 - The root bridge changed from SW0's perspective to SW1 (`000D.BD30.4B08`) since it could no longer see SW2 directly
 
 ### After Bringing the Link Back Up
-![After Recovery](images/day02-stp-after-recovery.png)
+![After Recovery](images/Day2%20images/day02-stp-after-recovery.png)
 
 I brought Fa0/2 back up with `no shutdown`. After about 30 seconds, STP reconverged again:
 - SW2 became the root bridge again (`0001.C953.A894`)
