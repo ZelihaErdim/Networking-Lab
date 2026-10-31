@@ -13,7 +13,7 @@ Build a two-router topology, assign IPs to all interfaces, add static routes on 
 
 ## Topology
 
-![Topology](images/Day3%20images/day03-topology.png)
+![Topology](images/day03-images/day03-topology.png)
 
 Two 1941 routers connected in a straight line with two PCs on each end.
 
@@ -62,22 +62,22 @@ ip route 192.168.1.0 255.255.255.0 10.0.0.1
 ## What I Verified
 
 ### Routing Table — R0
-![R0 route table](images/Day3%20images/day03-r0-route-table.png)
+![R0 route table](images/day03-images/day03-r0-route-table.png)
 
 Two `C` connected routes for R0's own interfaces. One `S` static route to `192.168.2.0/24` via `10.0.0.2`.
 
 ### Routing Table — R1
-![R1 route table](images/Day3%20images/day03-r1-route-table.png)
+![R1 route table](images/day03-images/day03-r1-route-table.png)
 
 Two `C` connected routes for R1's own interfaces. One `S` static route to `192.168.1.0/24` via `10.0.0.1`.
 
 ### Ping — PC0 to PC1
-![Ping](images/Day3%20images/day03-ping-success.png)
+![Ping](images/day03-images/day03-ping-success.png)
 
 4/4 packets received, 0% loss, TTL=126. First attempt had 2 timeouts while ARP resolved — clean on the second run.
 
 ### Tracert — PC0 to PC1
-![Tracert](images/Day3%20images/day03-tracert-pc0.png)
+![Tracert](images/day03-images/day03-tracert-pc0.png)
 
 - Hop 1: `192.168.1.1` — R0
 - Hop 2: `10.0.0.2` — R1

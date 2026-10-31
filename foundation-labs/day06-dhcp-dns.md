@@ -13,7 +13,7 @@ Configure both routers as DHCP servers for their connected PCs. Verify the PCs r
 
 ## Topology
 
-![Topology](images/Day6%20images/day06-topology.png)
+![Topology](images/day06-images/day06-topology.png)
 
 Same 2-router layout as previous labs. Routers serve as DHCP servers for their local networks.
 
@@ -64,12 +64,12 @@ Then switched both PCs from Static to DHCP in Desktop → IP Configuration.
 ## What I Verified
 
 ### PC0 DHCP Lease
-![PC0 DHCP](images/Day6%20images/day06-pc0-dhcp.png)
+![PC0 DHCP](images/day06-images/day06-pc0-dhcp.png)
 
 PC0 received `192.168.1.2` automatically — IP, mask, gateway, and DNS all filled in by DHCP without touching anything manually.
 
 ### Ping — PC0 to PC1
-![Ping](images/Day6%20images/day06-ping-success.png)
+![Ping](images/day06-images/day06-ping-success.png)
 
 4/4 packets received, 0% loss. PC0 (`192.168.1.2`) reached PC1 (`192.168.2.2`) through both routers.
 
