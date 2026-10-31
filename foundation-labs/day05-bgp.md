@@ -14,7 +14,7 @@ Build a 2-router topology across two different AS numbers, establish an eBGP pee
 
 ## Topology
 
-![Topology](images/Day5%20images/day05-topology.png)
+![Topology](images/day05-images/day05-topology.png)
 
 Two 1941 routers, each in a different AS, connected on a /30 point-to-point link.
 
@@ -52,12 +52,12 @@ Each router points to the other's interface IP as the neighbor, and specifies th
 ## What I Verified
 
 ### BGP Summary — R1
-![BGP Summary](images/Day5%20images/day05-bgp-summary.png)
+![BGP Summary](images/day05-images/day05-bgp-summary.png)
 
 Neighbor `10.0.0.1` (R0) is listed with AS 100. Up/Down shows the session has been stable, and `State/PfxRcd` shows a number — that means the peering is established and routes are being received.
 
 ### Ping — PC0 to PC1
-![Ping](images/Day5%20images/day05-ping-success.png)
+![Ping](images/day05-images/day05-ping-success.png)
 
 3/4 packets received. First packet timed out while ARP resolved — same behavior as every previous lab. The three replies confirm end-to-end reachability through BGP.
 

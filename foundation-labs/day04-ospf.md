@@ -14,7 +14,7 @@ Build a 3-router linear topology and run OSPF across all of them in Area 0. No s
 
 ## Topology
 
-![Topology](images/Day4%20images/day04-topology.png)
+![Topology](images/day04-images/day04-topology.png)
 
 Three 1941 routers in a line with a PC on each end. /30 subnets on the router-to-router links, /24 on the PC-facing interfaces.
 
@@ -94,7 +94,7 @@ The wildcard mask is the inverse of the subnet mask. `0.0.0.3` matches a /30, `0
 ## What I Verified
 
 ### OSPF Neighbors — R1
-![OSPF Neighbor](images/Day4%20images/day04-ospf-neighbor.png)
+![OSPF Neighbor](images/day04-images/day04-ospf-neighbor.png)
 
 R1 shows two neighbors, both in FULL state:
 - `192.168.1.1` = R0, reachable via G0/0 at `10.0.0.1`
@@ -103,14 +103,14 @@ R1 shows two neighbors, both in FULL state:
 FULL means the routers have exchanged their link-state databases completely.
 
 ### Routing Table — R0
-![Route Table](images/Day4%20images/day04-route-table.png)
+![Route Table](images/day04-images/day04-route-table.png)
 
 R0 shows two `O` entries — routes it learned from OSPF without any manual configuration:
 - `O 10.0.1.0/30 [110/2]` — the R1–R2 link
 - `O 192.168.2.0/24 [110/3]` — PC1's network, 3 hops away
 
 ### Ping — PC0 to PC1
-![Ping](images/Day4%20images/day04-ping-success.png)
+![Ping](images/day04-images/day04-ping-success.png)
 
 4/4 packets received, 0% loss, TTL=125. Three routers in the path so TTL dropped by 3 from the default 128.
 
