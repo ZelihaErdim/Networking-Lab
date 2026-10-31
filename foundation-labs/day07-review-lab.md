@@ -12,7 +12,7 @@ Build a review topology tying together VLANs, OSPF, DHCP, and DNS: PC0 connects 
 
 ## Topology
 
-![Topology](images/Day7%20images/day07-topology.png)
+![Topology](images/day07-images/day07-topology.png)
 
 | Device | Interface | IP | Subnet |
 |--------|-----------|-----|--------|
@@ -99,27 +99,27 @@ DNS service on Server0: A record `server.local` → `192.168.2.10`.
 ## What I Verified
 
 ### VLAN on Switch0
-![VLAN Brief](images/Day7%20images/day07-show-vlan-brief.png)
+![VLAN Brief](images/day07-images/day07-show-vlan-brief.png)
 
 VLAN 10 active with Fa0/1 and Fa0/2 both assigned.
 
 ### OSPF Neighbor
-![OSPF Neighbor](images/Day7%20images/day07-ospf-neighbor.png)
+![OSPF Neighbor](images/day07-images/day07-ospf-neighbor.png)
 
 R0 and R1 show FULL adjacency over the 10.0.0.0/30 link.
 
 ### PC0 DHCP Lease
-![PC0 DHCP](images/Day7%20images/day07-pc0-dhcp.png)
+![PC0 DHCP](images/day07-images/day07-pc0-dhcp.png)
 
 PC0 received 192.168.1.2, gateway 192.168.1.1, and DNS 192.168.2.10 — all handed out automatically.
 
 ### Ping to Server
-![Ping Server](images/Day7%20images/day07-ping-server.png)
+![Ping Server](images/day07-images/day07-ping-server.png)
 
 PC0 reached the server at 192.168.2.10 with 0% loss, confirming OSPF routing across both routers works end to end.
 
 ### DNS Resolution
-![DNS Resolution](images/Day7%20images/day07-dns-resolution.png)
+![DNS Resolution](images/day07-images/day07-dns-resolution.png)
 
 PC0 resolved `server.local` to 192.168.2.10 and reached it by name.
 
